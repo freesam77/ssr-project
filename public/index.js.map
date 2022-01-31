@@ -1,0 +1,1 @@
+{"mappings":"A,C;AAAAA,OAAO,CAACC,GAAR,CAAY,CAAZ","sources":["client/app.js"],"sourcesContent":["console.log('app js from client')"],"names":["console","log"],"version":3,"file":"index.js.map"}

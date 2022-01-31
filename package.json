@@ -1,0 +1,24 @@
+{
+  "name": "ssr_project",
+  "version": "1.0.0",
+  "main": "public/index.js",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.17.2",
+    "parcel": "^2.2.1",
+    "prettier": "^2.5.1",
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
+  },
+  "scripts": {
+    "start": "nodemon --exec babel-node server/index.js",
+    "build": "parcel build client/app.js --dist-dir public"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.12",
+    "@babel/node": "^7.16.8",
+    "@babel/preset-env": "^7.16.11",
+    "@babel/preset-react": "^7.16.7",
+    "nodemon": "^2.0.15"
+  }
+}
