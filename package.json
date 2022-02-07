@@ -3,6 +3,13 @@
   "version": "1.0.0",
   "main": "public/index.js",
   "license": "MIT",
+  "browserslist": "> 0.5%, last 2 versions, not dead",
+  "targets": {
+    "main": {
+      "context": "browser",
+      "includeNodeModules": true
+    }
+  },
   "dependencies": {
     "express": "^4.17.2",
     "parcel": "^2.2.1",
@@ -12,7 +19,7 @@
   },
   "scripts": {
     "start": "nodemon --exec babel-node server/index.js",
-    "build": "parcel build client/app.js --dist-dir public"
+    "build": "parcel build client/index.js --target main"
   },
   "devDependencies": {
     "@babel/core": "^7.16.12",

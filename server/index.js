@@ -1,30 +1,11 @@
 const express = require("express");
-const React = require("react");
 const ReactDOMServer = require("react-dom/server");
 const path = require("path");
+const React = require("react");
+const { App } = require("../shared/app.js");
 const app = express();
 app.use(express.static(path.join(__dirname, "..", "public")));
 const port = 3000;
-
-const SimpleComponent = () => (
-  <div
-    style={{
-      color: "red",
-      border: "1px solid black",
-      padding: "5px",
-      display: "inline-block",
-    }}
-  >
-    Aussie BB sucks
-    <button
-      onClick={() => {
-        console.log("I agree");
-      }}
-    >
-      Test Button
-    </button>
-  </div>
-);
 
 const template = (content) =>
   `<!DOCTYPE html>
@@ -44,7 +25,7 @@ const template = (content) =>
     </html>`;
 
 app.get("/", (req, res) => {
-  const string = ReactDOMServer.renderToString(<SimpleComponent />);
+  const string = ReactDOMServer.renderToString(<App />);
   res.send(template(string));
 });
 
